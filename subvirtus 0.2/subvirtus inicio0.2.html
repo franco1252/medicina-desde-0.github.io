@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio en este mundo</title>
+	 <link rel="icon" type="image/png" href="../imagenes/twi.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: url(../imagenes/tec1.jpg) no-repeat center center/cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Barra del navegador */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        nav h2 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Título con diseño gráfico */
+        .title-container {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .title-container h1 {
+            font-size: 3rem;
+            color: #ffeb3b;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .title-container p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        /* Contenedor del slider */
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 400px;
+            margin-right: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Botones del slider */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* Información del slider */
+        .slide-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 300px;
+        }
+
+        /* Contenedor de video */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        /* Pie de página */
+           footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2><a href="../index.html">HE XE</a></h2>
+        <ul class="nav-links">
+            <li><a href="subvirtus inicio0.2.html">Inicio</a></li>
+            <li><a href="subvirtus med desde 0.2.html">Med desde 0</a></li>
+            <li><a href="subvirtus abitos saludables0.2.html">Habitos saludables</a></li>
+            <li><a href="subvirtus guia 0.2.html">Guia</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Título con diseño -->
+    <div class="title-container">
+        <h1>La nueva era de la medicina</h1>
+        <p>Explorando cómo la tecnología ha revolucionado la medicina moderna.</p>
+    </div>
+
+    <!-- Contenedor de slider y información -->
+    <div class="content-container">
+        <div class="slider-container">
+            <button class="prev" onClick="moveSlide(-1)">&#10094;</button>
+            <div class="slider" id="slider">
+                <div class="slide"><img src="../imagenes/in2.jpeg" alt="Imagen 1"></div>
+                <div class="slide"><img src="../imagenes/in3.jpeg" alt="Imagen 2"></div>
+                <div class="slide"><img src="../imagenes/in4.jpeg" alt="Imagen 3"></div>
+                <div class="slide"><img src="../imagenes/in5.jpeg" alt="Imagen 4"></div>
+            </div>
+            <button class="next" onClick="moveSlide(1)">&#10095;</button>
+        </div>
+       <div class="slide-info">
+    <h2 id="slide-title" style="text-align: center; color: red;">Cirugía Robótica</h2>
+    <p id="slide-text">El sistema Da Vinci, con cuatro brazos robóticos, revolucionó la cirugía en el siglo XXI, permitiendo intervenciones más precisas y cómodas en diversas especialidades, superando las limitaciones de la laparoscopía.</p>
+</div>
+
+    </div>
+
+    <!-- Contenedor de video -->
+    <div class="video-container">
+        <iframe src="../videos/in1.mp4"frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+           <p>&copy;2025 mi sitio web Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100036554273546" target="_blank" rel="noopener noreferrer">
+			<img src="../imagenes/fas3.png" alt="Facebook"></a>
+            <a href="https://www.twitch.tv/cartoons_cartoons_tv_2" target="_blank" rel="noopener noreferrer">
+			<img src="../imagenes/twi.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+			<img src="../imagenes/inta.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    // espaco con títulos e información
+    const slideData = [
+        {
+            title: "Cirugía Robótica",
+            text: "El sistema Da Vinci, con cuatro brazos robóticos, revolucionó la cirugía en el siglo XXI, permitiendo intervenciones más precisas y cómodas en diversas especialidades, superando las limitaciones de la laparoscopía."
+        },
+        {
+            title: "Detección Temprana del Cáncer",
+            text: "Esta prueba de sangre mínimamente invasiva ayuda a detectar y monitorear el cáncer, pero aún no reemplaza otros métodos y se estudia su mejor aplicación."
+        },
+        {
+            title: "Tecnología en Medicina",
+            text: "La integración de la tecnología ha permitido avances en el diagnóstico y tratamiento médico, mejorando la calidad de vida."
+        },
+        {
+            title: "Salud Digital",
+            text: "Las plataformas digitales están revolucionando la forma en que se prestan los servicios de salud, facilitando el acceso y la personalización del tratamiento."
+        }
+    ];
+
+    function moveSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+        if (currentSlide >= slides.length) currentSlide = 0;
+
+        document.getElementById('slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Actualizar título y texto
+        document.getElementById('slide-title').innerText = slideData[currentSlide].title;
+        document.getElementById('slide-text').innerText = slideData[currentSlide].text;
+    }
+</script>
+
+</body>
+</html>
